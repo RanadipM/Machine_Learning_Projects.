@@ -8,6 +8,8 @@ Education: Postgraduate in Mathematics.
 Focus: Bridging theoretical mathematics with Machine Learning, Statistical Analysis, and Financial Modeling.
 
 Tech Stack: Python (Pandas, NumPy, Scikit-Learn), SQL, Streamlit, and Tableau.
+
+
 💳 Credit Card Default Prediction
 Objective: Developing a classification model to predict the probability of credit card defaults.
 
