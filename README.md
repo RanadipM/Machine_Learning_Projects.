@@ -9,10 +9,18 @@ Focus: Bridging theoretical mathematics with Machine Learning, Statistical Analy
 
 Tech Stack: Python (Pandas, NumPy, Scikit-Learn), SQL, Streamlit, and Tableau.
 
+Projects :
 
 💳 Credit Card Default Prediction
 Objective: Developing a classification model to predict the probability of credit card defaults.
 
-Math/Stats Used: Logistic Regression, Decision Trees, and handling class imbalance using SMOTE.
+Algorithims Used: Logistic Regression, Decision Trees, and handling class imbalance using SMOTE.
 
 Status: Summary and Notebook completed.
+
+🩺 Heart Disease Prediction
+Objective: Leveraging patient health data to predict the presence of heart disease.
+
+Algorithms Used : K-Nearest Neighbors (KNN) and Random Forest.
+
+Status: Notebook completed.
