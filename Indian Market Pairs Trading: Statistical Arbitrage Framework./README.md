@@ -1,5 +1,3 @@
-Link - https://indian-market-pairs-trading-statistical-arbitrage-framework-9r.streamlit.app
-
 📈 Statistical Arbitrage: Indian Market Pairs Trading Framework An End-to-End Quantitative Pipeline utilizing Machine Learning and Time-Series Econometrics.
 
 Project Overview This project develops a robust framework for Pairs Trading (a market-neutral investment strategy) specifically tailored for the National Stock Exchange (NSE). It systematically identifies cointegrated stock pairs using clustering techniques and simulates strategy performance through a custom backtesting engine and an interactive dashboard.
