@@ -8,12 +8,21 @@ st.set_page_config(page_title="Pairs Trading Dashboard", layout="wide")
 st.title("📈 Pairs Trading Profit Simulator")
 
 # --- 1. LOAD DATA ---
+import os
+
 @st.cache_data
 def load_data():
     try:
+        # Get the absolute path to the directory this script is in
+        base_path = os.path.dirname(__file__)
+        
+        # Build full paths to ensure the server finds the files
+        fundamentals_path = os.path.join(base_path, "fundamentals.csv")
+        trades_path = os.path.join(base_path, "trade_df.csv")
+
         # Load CSVs
-        fundamentals = pd.read_csv("fundamentals.csv")
-        trades = pd.read_csv("trade_df.csv")
+        fundamentals = pd.read_csv(fundamentals_path)
+        trades = pd.read_csv(trades_path)
         
         # Strip spaces from column names
         trades.columns = trades.columns.str.strip()
