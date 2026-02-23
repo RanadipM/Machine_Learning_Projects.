@@ -20,15 +20,9 @@ st.set_page_config(page_title="Speech Intelligence Dashboard", layout="wide")
 # ==========================
 # SAFE NLTK DOWNLOAD (Cloud Safe)
 # ==========================
-nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
-if not os.path.exists(nltk_data_path):
-    os.makedirs(nltk_data_path)
-
-nltk.download("punkt", download_dir=nltk_data_path)
-nltk.download("vader_lexicon", download_dir=nltk_data_path)
-nltk.download("stopwords", download_dir=nltk_data_path)
-
-nltk.data.path.append(nltk_data_path)
+nltk.download("punkt", quiet=True)
+nltk.download("vader_lexicon", quiet=True)
+nltk.download("stopwords", quiet=True)
 
 sia = SentimentIntensityAnalyzer()
 stop_words = set(stopwords.words("english"))
@@ -40,18 +34,18 @@ if "text_input" not in st.session_state:
     st.session_state.text_input = ""
 
 # ==========================
-# BASE DIRECTORY (IMPORTANT FIX)
+# BASE DIRECTORY (IMPORTANT FIX FOR DEPLOYMENT)
 # ==========================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ==========================
-# UI HEADER
+# HEADER
 # ==========================
 st.title("🚀 Speech Intelligence & NLP Dashboard")
 st.markdown("Analyze speeches using Sentiment Analysis, Topic Modeling, and Text Intelligence.")
 
 # ==========================
-# SIDEBAR INPUT
+# SIDEBAR
 # ==========================
 st.sidebar.header("Select Input Source")
 
@@ -61,7 +55,7 @@ option = st.sidebar.radio(
 )
 
 # ==========================
-# PREDEFINED FILES (DEPLOY SAFE)
+# PREDEFINED FILES
 # ==========================
 if option == "Select Predefined Speech":
 
@@ -211,5 +205,3 @@ if st.button("Analyze"):
         topics = extract_topics(text_data)
         for topic in topics:
             st.write(topic)
-
-
