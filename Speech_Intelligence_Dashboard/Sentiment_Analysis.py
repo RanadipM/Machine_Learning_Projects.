@@ -57,12 +57,11 @@ option = st.sidebar.radio(
 # ==========================
 if option == "Select Predefined Speech":
     
-    speeches = {
-        "Bose Speech": "Sentiment_Analysis_Bose.txt",
-        "Gandhiji Speech": "Sentiment_Analysis_Gandhi.txt",
-        "Mandela Speech": "Sentiment_Analysis_Mandela.txt"
-    }
-    
+speeches = {
+    "Bose Speech": os.path.join(BASE_DIR, "Sentiment_Analysis_Bose.txt"),
+    "Gandhiji Speech": os.path.join(BASE_DIR, "Sentiment_Analysis_Gandhi.txt"),
+    "Mandela Speech": os.path.join(BASE_DIR, "Sentiment_Analysis_Mandela.txt")
+}
     selected_speech = st.sidebar.selectbox("Select a speech:", list(speeches.keys()))
     
     if st.sidebar.button("Load Speech"):
@@ -231,3 +230,4 @@ if st.button("Analyze"):
         topics = extract_topics(text_data)
         for topic in topics:
             st.write(topic)
+
