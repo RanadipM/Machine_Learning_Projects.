@@ -26,3 +26,4 @@ https://machinelearningprojects-2uizwnxgw8nfojedzhejgl.streamlit.app/
 This dashboard enables users to analyze historical or custom speeches and extract meaningful insights through natural language processing techniques. It provides visual and analytical tools to understand sentiment patterns, dominant themes, and textual structure within speeches.
 
 ## Deployment
+The application is deployed on Streamlit Cloud and publicly accessible via the link above.
