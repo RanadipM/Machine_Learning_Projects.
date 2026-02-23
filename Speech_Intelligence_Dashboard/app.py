@@ -21,6 +21,7 @@ st.set_page_config(page_title="Speech Intelligence Dashboard", layout="wide")
 # SAFE NLTK DOWNLOAD (Cloud Safe)
 # ==========================
 nltk.download("punkt", quiet=True)
+nltk.download("punkt_tab", quiet=True)
 nltk.download("vader_lexicon", quiet=True)
 nltk.download("stopwords", quiet=True)
 
@@ -204,4 +205,5 @@ if st.button("Analyze"):
         st.subheader("🧠 Extracted Topics (LDA)")
         topics = extract_topics(text_data)
         for topic in topics:
+
             st.write(topic)
