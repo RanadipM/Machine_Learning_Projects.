@@ -20,9 +20,13 @@ st.set_page_config(page_title="Speech Intelligence Dashboard", layout="wide")
 # ==========================
 # NLTK DOWNLOAD
 # ==========================
-nltk.download("punkt", quiet=True)
-nltk.download("vader_lexicon", quiet=True)
-nltk.download("stopwords", quiet=True)
+try:
+    nltk.download("punkt", quiet=True)
+    nltk.download("punkt_tab", quiet=True) # Add this line
+    nltk.download("vader_lexicon", quiet=True)
+    nltk.download("stopwords", quiet=True)
+except Exception as e:
+    st.error(f"Error downloading NLTK data: {e}")
 
 sia = SentimentIntensityAnalyzer()
 stop_words = set(stopwords.words("english"))
@@ -343,3 +347,4 @@ if st.button("Analyze"):
                 st.write(topic)
 
             st.caption("Topic modeling uncovers hidden thematic clusters in the speech.")
+
