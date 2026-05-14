@@ -170,19 +170,28 @@ def getQuasiDiag(link):
     return sortIx.tolist()
 
 def getRecBipart(cov, sortIx):
-    """Recursive bisection for HRP weights"""
-    w = pd.Series(1, index=sortIx)
+    """Recursive bisection for HRP weights (FIXED for pandas compatibility)"""
+    
+    # ✅ Fix 1: use float instead of int
+    w = pd.Series(1.0, index=sortIx)
+
     cItems = [sortIx]
+
     while len(cItems) > 0:
         cItems = [i[j:k] for i in cItems
-                  for j, k in ((0, len(i) // 2), (len(i) // 2, len(i)))
+                  for j, k in ((0, len(i)//2), (len(i)//2, len(i)))
                   if len(i) > 1]
+
         for i in range(0, len(cItems), 2):
             cVar0 = getClusterVar(cov, cItems[i])
-            cVar1 = getClusterVar(cov, cItems[i + 1])
+            cVar1 = getClusterVar(cov, cItems[i+1])
+
             alpha = 1 - cVar0 / (cVar0 + cVar1)
-            w[cItems[i]]     *= alpha
-            w[cItems[i + 1]] *= 1 - alpha
+
+            # ✅ Fix 2: replace inplace operation with .loc
+            w.loc[cItems[i]]     = w.loc[cItems[i]] * alpha
+            w.loc[cItems[i+1]]   = w.loc[cItems[i+1]] * (1 - alpha)
+
     return w
 
 def getHRP(cov, corr):
