@@ -505,7 +505,7 @@ with tab_tbl:
     disp = portfolios.copy()
     disp.index = [s.replace('.NS','') for s in disp.index]
     # Show numeric and formatted side by side
-    disp_pct = disp.applymap(lambda x: f"{x*100:.3f}%")
+    disp_pct = (disp * 100).round(3).astype(str) + '%'
     st.dataframe(disp_pct, use_container_width=True)
     # Concentration metrics
     hhi = {s: (portfolios[s]**2).sum() for s in ['MVP','HRP','Eigen']}
