@@ -1,23 +1,24 @@
-# Credit Risk Analytics Platform
+Welcome to my repository! This space serves as a collection of end-to-end data science projects I've developed during my Post Graduate Program in Data Science & AI (PGPDS&AI) at Praxis Business School.
 
-## Architecture
-RAW (ADLS Gen2) → Staging (Python ELT) → Gold (Azure SQL) → Streamlit Dashboard
+Professional Background
+Education: Postgraduate in Mathematics.
 
-## Tech Stack
-- Azure ADLS Gen2 — data lake storage
-- Azure SQL Database — serverless star schema DWH
-- Python / Pandas — ELT pipeline
-- Streamlit — interactive dashboard
-- Plotly — visualizations
-- Real Lending Club data — 100,000 loans
+Focus: Bridging theoretical mathematics with Machine Learning, Statistical Analysis, and Financial Modeling.
 
-## Dashboard Pages
-1. Portfolio Overview — KPIs, NPA by grade, risk distribution
-2. Risk Analysis — PD distribution, expected loss, scatter plots
-3. Loan Explorer — filterable loan table with charts
-4. Pipeline Status — DQ report, table counts, layer status
+Tech Stack: Python (Pandas, NumPy, Scikit-Learn), SQL, Streamlit, and Tableau.
 
-## Setup
-1. Set environment variables (see .env.template)
-2. pip install -r requirements.txt
-3. streamlit run app.py
+Projects :
+
+1. Credit Card Default Prediction
+Objective: Developing a classification model to predict the probability of credit card defaults.
+
+Algorithims Used: Logistic Regression, Decision Trees, and handling class imbalance using SMOTE.
+
+Status: Summary and Notebook completed.
+
+2. Heart Disease Prediction
+Objective: Leveraging patient health data to predict the presence of heart disease.
+
+Algorithms Used : K-Nearest Neighbors (KNN) and Random Forest.
+
+Status: Notebook completed.

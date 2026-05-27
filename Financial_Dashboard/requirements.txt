@@ -1,0 +1,9 @@
+yfinance>=0.2.40
+google-genai>=1.0.0
+openpyxl
+plotly>=5.0.0
+gradio>=4.40.0
+httpx>=0.27.2
+requests
+numpy
+pandas
