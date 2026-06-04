@@ -4,18 +4,6 @@ _APP_DIR = os.path.dirname(os.path.abspath(__file__))
 if _APP_DIR not in sys.path:
     sys.path.insert(0, _APP_DIR)
 
-"""
-Secure GenAI Student-Support Assistant — Streamlit app.
-
-Implements the AI & Cybersecurity assignment as a deployable demo:
-  • Tab 1: Live multi-agent + RAG assistant (Part 1) with visible agent trace
-  • Tab 2: Architecture diagrams (Part 1 & Part 2)
-  • Tab 3: Security dashboard — guardrails, RBAC, monitoring log (Part 2)
-  • Tab 4: Full design write-up (all parts + critical thinking)
-
-Runs anywhere. Uses Groq -> Gemini -> mock for generation.
-"""
-
 import time
 import streamlit as st
 
