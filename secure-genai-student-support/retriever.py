@@ -9,7 +9,10 @@ rest of the app is agnostic to the backend.
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from data.knowledge_base import KNOWLEDGE_BASE
+try:
+    from data.knowledge_base import KNOWLEDGE_BASE
+except ModuleNotFoundError:
+    from knowledge_base import KNOWLEDGE_BASE
 
 
 class Retriever:
