@@ -1,6 +1,4 @@
 ---
-
-Link -- "https://machinelearningprojects-2hmpgrwojs9uresowepp3g.streamlit.app/"
 title: Secure GenAI Student Support
 emoji: 🎓
 colorFrom: blue
@@ -12,6 +10,8 @@ pinned: false
 ---
 
 # Secure GenAI Student-Support Assistant
+
+https://machinelearningprojects-2hmpgrwojs9uresowepp3g.streamlit.app/
 
 A deployable implementation of the **AI & Cybersecurity Integrated Assignment**:
 a multi-agent + RAG student-support assistant with security guardrails baked in.
