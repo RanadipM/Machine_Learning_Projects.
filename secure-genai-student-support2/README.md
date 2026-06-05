@@ -11,7 +11,7 @@ pinned: false
 
 # Secure GenAI Student-Support Assistant
 
-**Live demo:** https://machinelearningprojects-2hmpgrwojs9uresowepp3g.streamlit.app/
+**Live demo:** https://machinelearningprojects-ca3v8bft2xckpszycdnjwz.streamlit.app/
 
 A deployable implementation of the **AI & Cybersecurity Integrated Assignment**:
 a multi-agent + RAG student-support assistant with security engineered into the
